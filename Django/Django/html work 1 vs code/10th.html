@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowspan Table</title>
+
+    <style>
+        table {
+            border: 2px solid blue;
+            border-collapse: collapse;
+            width: 400px;
+            text-align: center;
+        }
+        th, td {
+            border: 2px solid blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>Arun</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Phone</th>
+            <td>1234</td>
+        </tr>
+        <tr>
+            <td>4567</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>23</td>
+        </tr>
+    </table>
+
+</body>
+</html>

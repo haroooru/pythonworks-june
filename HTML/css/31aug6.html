@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 15px;
+        }
+
+        input, select {
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        .half {
+            width: 46%;
+        }
+
+        .full {
+            width: 96%;
+        }
+
+        .city {
+            width: 46%;
+        }
+
+        .state {
+            width: 28%;
+        }
+
+        .zip {
+            width: 15%;
+        }
+
+        button {
+            background-color: #087df0;
+            color: white;
+            border: none;
+            padding: 9px 13px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label>Email</label>
+    <input type="text" class="half">
+
+    <label>Password</label>
+    <input type="password" class="half">
+
+    <br><br>
+
+    <label>Address</label>
+    <br>
+    <input type="text" class="full" placeholder="1234 Main St">
+
+    <br><br>
+
+    <label>Address 2</label>
+    <br>
+    <input type="text" class="full" placeholder="Apartment, studio, or floor">
+
+    <br><br>
+
+    <label>City</label>
+    <label style="margin-left: 280px;">State</label>
+    <label style="margin-left: 180px;">Zip</label>
+
+    <br>
+
+    <input type="text" class="city">
+
+    <select class="state">
+        <option>Choose...</option>
+        <option>Kerala</option>
+        <option>Tamil Nadu</option>
+    </select>
+
+    <input type="text" class="zip">
+
+    <br><br>
+
+    <input type="checkbox">
+    <label>Remember me</label>
+
+    <br><br>
+
+    <button>Submit</button>
+
+</body>
+</html>

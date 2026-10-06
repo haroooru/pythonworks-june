@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Cafe</title>
+
+    <style>
+
+        body{
+            background-color: antiquewhite;
+            font-family: Arial;
+            margin: 15px;
+        }
+
+        .head{
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .head img{
+            width: 80px;
+        }
+
+        .links{
+            background-color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        a{
+            color: darkgreen;
+            margin: 15px;
+        }
+
+        .intro{
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .parent{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .card{
+            border: 2px solid darkgreen;
+            height: 400px;
+            width: 250px;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        .card_header{
+            text-align: center;
+            color: white;
+            background-color: darkgreen;
+            padding: 10px;
+        }
+
+        .card_img img{
+            width: 250px;
+            height: 180px;
+        }
+
+        .card_body{
+            padding: 10px;
+            text-align: center;
+        }
+
+        h2{
+            text-align: center;
+            color: darkgreen;
+        }
+
+        h3{
+            color: darkgreen;
+        }
+
+        button{
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            padding: 9px 13px;
+            border-radius: 4px;
+        }
+
+        .form{
+            background-color: white;
+            width: 50%;
+            margin: auto;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        input, select{
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        .full{
+            width: 96%;
+        }
+
+        .contact{
+            background-color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .bottom{
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="head" id="home">
+
+        <img src="Starbucks.png">
+
+        <h1>STARBUCKS</h1>
+
+        <p>Good coffee. Good day.</p>
+
+    </div>
+
+
+    <div class="links">
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#menu">Menu</a>
+
+        <a href="#order">Order</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+
+    <div class="intro" id="about">
+
+        <h2>Welcome to Starbucks</h2>
+
+        <p>Enjoy your favourite coffee and snacks with us.</p>
+
+        <p>We serve fresh coffee, tea and tasty snacks.</p>
+
+        <br>
+
+        <a href="https://www.starbucks.com">Learn more</a>
+
+    </div>
+
+
+    <h2 id="menu">Our Menu</h2>
+
+
+    <div class="parent">
+
+        <div class="card">
+
+            <div class="card_header">
+                COFFEE
+            </div>
+
+            <div class="card_img">
+                <img src="coffee.jpg">
+            </div>
+
+            <div class="card_body">
+
+                <h3>Hot Coffee</h3>
+
+                <p>Fresh and delicious coffee</p>
+
+                <b>$4</b>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card_header">
+                TEA
+            </div>
+
+            <div class="card_img">
+                <img src="tea.jpeg">
+            </div>
+
+            <div class="card_body">
+
+                <h3>Green Tea</h3>
+
+                <p>A fresh cup of tea</p>
+
+                <b>$3</b>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card_header">
+                SANDWICH
+            </div>
+
+            <div class="card_img">
+                <img src="sadwitch.jpg">
+            </div>
+
+            <div class="card_body">
+
+                <h3>Veg Sandwich</h3>
+
+                <p>Fresh sandwich with vegetables</p>
+
+                <b>$5</b>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="parent">
+
+        <div class="card">
+
+            <div class="card_header">
+                CAKE
+            </div>
+
+            <div class="card_img">
+                <img src="cake.jpg">
+            </div>
+
+            <div class="card_body">
+
+                <h3>Chocolate Cake</h3>
+
+                <p>Soft and tasty chocolate cake</p>
+
+                <b>$5</b>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card_header">
+                MUFFIN
+            </div>
+
+            <div class="card_img">
+                <img src="muffin.jpg">
+            </div>
+
+            <div class="card_body">
+
+                <h3>Blueberry Muffin</h3>
+
+                <p>Fresh blueberry muffin</p>
+
+                <b>$3</b>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="form" id="order">
+
+        <h2>Order Now</h2>
+
+        <label>Name</label>
+
+        <br>
+
+        <input type="text" class="full" placeholder="Enter your name">
+
+        <br><br>
+
+        <label>Address</label>
+
+        <br>
+
+        <input type="text" class="full" placeholder="Enter your address">
+
+        <br><br>
+
+        <label>Choose your item</label>
+
+        <br>
+
+        <select class="full">
+
+            <option>Choose</option>
+
+            <option>Coffee</option>
+
+            <option>Tea</option>
+
+            <option>Sandwich</option>
+
+            <option>Cake</option>
+
+            <option>Muffin</option>
+
+        </select>
+
+        <br><br>
+
+        <input type="checkbox">
+
+        <label>Remember me</label>
+
+        <br><br>
+
+        <button>Submit</button>
+
+        <button>Reset</button>
+
+    </div>
+
+
+    <div class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Starbucks Cafe</p>
+
+        <p>Email: starbuckscafe@gmail.com</p>
+
+        <p>Phone: 9876543210</p>
+
+        <p>Visit us and enjoy your favourite coffeeeee!</p>
+
+    </div>
+
+
+    <div class="bottom">
+
+        <p>2026 Starbucks Cafe</p>
+
+        <p>Thank you for visiting!</p>
+
+    </div>
+
+
+</body>
+</html>

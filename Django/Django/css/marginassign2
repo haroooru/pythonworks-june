@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blabla</title>
+    <style>
+        #b{
+            border: 2px solid lightseagreen;
+        }
+        
+        #j{
+            border: 2px solid lightcoral;
+            width: 100px;
+            margin: auto;
+            color: aliceblue;
+ 
+        }
+
+        #k{
+            border: 2px solid lightcoral;
+            width: 100px;
+            margin-right: auto;
+            color: aliceblue;
+            
+        }
+
+        #n{
+            border: 2px solid lightcoral;
+            width: 100px;
+            margin-left: auto;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+<div id="b">
+    <div id="j">
+        <center><p><b>1</b></p></center>
+    </div>
+
+    <div id="k">
+        <center><p><b>2</b></p></center>
+    </div>
+
+    <div id="n">
+        <center><p><b>3</b></p></center>
+    </div>
+</div>    
+</body>
+</html>
+

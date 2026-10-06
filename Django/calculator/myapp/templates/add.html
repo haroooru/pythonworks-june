@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add</title>
+</head>
+<body>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    <input type="number" name="number1" placeholder="Number 1">
+    <br><br>
+
+    <input type="number" name="number2" placeholder="Number 2">
+    <br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<h3>Sum is {{ sum }}</h3>
+
+</body>
+</html>

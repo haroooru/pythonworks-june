@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 WORK</title>
+    <style>
+        body{
+            background-color:lightgrey;
+            font-family: Arial, sans-serif;
+        }
+        .parent{
+            border: 2px solid grey;
+            width: 1200px;
+            height: 750px;
+            margin: auto;
+            background-color:rgba(128, 128, 128,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .card_img img{
+            border: 2px solid lightgrey;
+        }
+        .card_text{
+            width: 500px;
+            padding: 20px;
+        }
+        .card_text h2{
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .card_text h3{
+            font-size: 22px;
+            color: green;
+            margin-bottom: 15px;
+        }
+        .card_text p{
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .btn{
+            background-color: blue;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <!-- Left side: product image -->
+    <div class="card_img">
+        <img src="sho.jpeg" width="400px" height="400px" alt="Sample Product">
+    </div>   
+
+    <!-- Right side: product info -->
+    <div class="card_text">
+        <h2>SAMPLE PRODUCT</h2>
+        <h3>$9.95</h3>
+        <p>Sample text. this is a simple product description.</p>
+        <button class="btn">ADD TO CART</button>
+    </div>   
+</div>    
+</body>
+</html>
