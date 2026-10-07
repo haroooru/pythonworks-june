@@ -50,92 +50,22 @@
  ('Amal','amal@gmail.com',26,'Male',76,2);
 
 
- -- 1
+select * from Student where mark > 80 order by mark desc;
 
- select *
- from Student
- where mark > 80
- order by mark desc;
+select max(mark),min(mark),avg(mark) from Student;
 
+select * from Student order by mark desc limit 5;
 
- -- 2
+select student_name,mark from Student where age between 18 and 25 order by age;
 
- select max(mark),min(mark),avg(mark)
- from Student;
+select Course.course_name,count(Student.student_id) from Course join Student on Course.course_id=Student.course_id group by Course.course_name;
 
+select Course.course_name,count(Student.student_id) from Course join Student on Course.course_id=Student.course_id group by Course.course_name having count(Student.student_id)>2;
 
- -- 3
+select Student.student_name,Student.mark,Course.course_name from Student inner join Course on Student.course_id=Course.course_id;
 
- select *
- from Student
- order by mark desc
- limit 5;
+select Course.course_name,Student.student_name from Course left join Student on Course.course_id=Student.course_id;
 
+select * from Student where mark > (select avg(mark) from Student);
 
- -- 4
-
- select student_name,mark
- from Student
- where age between 18 and 25
- order by age;
-
-
- -- 5
-
- select Course.course_name,count(Student.student_id)
- from Course
- join Student
- on Course.course_id=Student.course_id
- group by Course.course_name;
-
-
- -- 6
-
- select Course.course_name,count(Student.student_id)
- from Course
- join Student
- on Course.course_id=Student.course_id
- group by Course.course_name
- having count(Student.student_id)>2;
-
-
- -- 7
-
- select Student.student_name,Student.mark,Course.course_name
- from Student
- inner join Course
- on Student.course_id=Course.course_id;
-
-
- -- 8
-
- select Course.course_name,Student.student_name
- from Course
- left join Student
- on Course.course_id=Student.course_id;
-
-
- -- 9
-
- select *
- from Student
- where mark > (
- select avg(mark)
- from Student
- );
-
-
- -- 10
-
- select Student.student_name,Student.mark,Course.course_name
- from Student
- join Course
- on Student.course_id=Course.course_id
- where Student.mark=(
- select max(mark)
- from Student
- where Student.mark<(
- select max(mark)
- from Student
- )
- );
+select Student.student_name,Student.mark,Course.course_name from Student join Course on Student.course_id=Course.course_id where Student.mark=(select max(mark) from Student where Student.mark<(select max(mark) from Student));
