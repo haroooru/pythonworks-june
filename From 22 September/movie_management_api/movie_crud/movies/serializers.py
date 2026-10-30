@@ -1,0 +1,50 @@
+
+from rest_framework import serializers
+from movies.models import Movie
+
+
+class MovieSerializer(serializers.Serializer):
+    title = serializers.CharField()
+    director = serializers.CharField()
+    language = serializers.CharField()
+    year = serializers.IntegerField()
+    rating = serializers.FloatField()
+    runtime = serializers.IntegerField()
+    image = serializers.ImageField(required=False, allow_null=True)
+
+    # After validation and before saving
+    def create(self, validated_data):
+        m = Movie.objects.create(**validated_data)
+        return m
+
+    def update(self, instance, validated_data):
+        instance.title = validated_data.get('title', instance.title)
+        instance.director = validated_data.get('director', instance.director)
+        instance.language = validated_data.get('language', instance.language)
+        instance.year = validated_data.get('year', instance.year)
+        instance.rating = validated_data.get('rating', instance.rating)
+        instance.runtime = validated_data.get('runtime', instance.runtime)
+        instance.image = validated_data.get('image', instance.image)
+        instance.save()
+        return instance
+
+
+
+# --------------------------------------------------
+# Alternative approach: ModelSerializer
+# Keeping the original alternative code for reference
+# --------------------------------------------------
+
+# from rest_framework import serializers
+# from movies.models import Movie
+#
+# class MovieSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Movie
+#         fields = '__all__'
+#
+#         # Alternative: specify fields individually
+#         # fields = [
+#         #     'title', 'director', 'language',
+#         #     'year', 'rating', 'runtime'
+#         # ]
